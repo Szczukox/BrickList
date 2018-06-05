@@ -1,8 +1,11 @@
 package com.example.patry.bricklist
 
+import android.content.Intent
 import android.database.SQLException
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             throw sqle
 
         }
+    }
 
+    fun addProject(v: View) {
+        val intent = Intent(applicationContext, AddProjectActivity::class.java)
+        startActivityForResult(intent, Const.ADD_PROJECT_REQUEST_CODE)
     }
 }
