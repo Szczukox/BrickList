@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddProjectActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".InventoryActivity"></activity>
     </application>
 
 </manifest>
