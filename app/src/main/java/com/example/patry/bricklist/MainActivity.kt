@@ -37,4 +37,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, AddProjectActivity::class.java)
         startActivityForResult(intent, Const.ADD_PROJECT_REQUEST_CODE)
     }
+
+    fun settings(v: View) {
+        val intent = Intent(applicationContext, SettingsActivity::class.java)
+        startActivityForResult(intent, Const.SETTINGS_REQUEST_CODE)
+    }
 }
