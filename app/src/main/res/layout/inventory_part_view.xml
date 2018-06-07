@@ -7,33 +7,23 @@
     android:maxHeight="100dp"
     app:layout_constrainedHeight="false">
 
-    <ImageView
-        android:id="@+id/itemImage"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:maxHeight="100dp"
-        app:srcCompat="@mipmap/ic_launcher" />
-
     <LinearLayout
-        android:layout_width="261dp"
+        android:layout_width="333dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="0dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/itemName"
+            android:id="@+id/nazwaKlockaTextView"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:text="nazwa klocka"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/itemAmount"
+            android:id="@+id/liczbaKlockowTextView"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:text="0 / 0"
@@ -42,7 +32,7 @@
 
 
     <Button
-        android:id="@+id/itemPlus"
+        android:id="@+id/plusButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
@@ -51,11 +41,11 @@
         android:text="+" />
 
     <Button
-        android:id="@+id/itemMinus"
+        android:id="@+id/minusButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/itemPlus"
-        android:layout_alignStart="@+id/itemPlus"
-        android:layout_below="@+id/itemPlus"
+        android:layout_alignLeft="@+id/plusButton"
+        android:layout_alignStart="@+id/plusButton"
+        android:layout_below="@+id/plusButton"
         android:text="-" />
 </RelativeLayout>

@@ -1,11 +1,10 @@
 package com.example.patry.bricklist
 
 import android.content.Intent
-import android.database.SQLException
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.ArrayAdapter
+import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
@@ -26,10 +25,15 @@ class MainActivity : AppCompatActivity() {
             throw Error("Unable to create database")
         }
 
+        projektyListView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val intent = Intent(applicationContext, ProjectActivity::class.java)
+            intent.putExtra("id", inventories.get(position).id)
+            intent.putExtra("name", inventories.get(position).name)
+            startActivity(intent)
+        }
+
         inventories = dataBaseHelper.getInventories()
-
         projektyListView.adapter = InventoryListAdapter(applicationContext, R.layout.inventory_view, inventories)
-
     }
 
     fun addProject(v: View) {

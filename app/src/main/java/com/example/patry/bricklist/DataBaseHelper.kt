@@ -212,7 +212,7 @@ class DataBaseHelper
     }
 
     fun getInventories() : MutableList<Inventory>{
-        var inventories = mutableListOf<Inventory>()
+        val inventories = mutableListOf<Inventory>()
         val sqlQuery = "SELECT * FROM Inventories ORDER BY LastAccessed DESC"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
@@ -223,6 +223,27 @@ class DataBaseHelper
         }
         cursor.close()
         return inventories
+    }
+
+    fun getInventoryParts(inventoryID : Int) : MutableList<InventoryPart> {
+        val inventoriesParts = mutableListOf<InventoryPart>()
+        val sqlQuery = "SELECT * FROM InventoriesParts WHERE InventoryID = $inventoryID"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        cursor.moveToFirst()
+        while (cursor.moveToNext()) {
+            val inventoriesPart = InventoryPart(cursor.getInt(0),
+                    cursor.getInt(1),
+                    cursor.getInt(2),
+                    cursor.getInt(3),
+                    cursor.getInt(4),
+                    cursor.getInt(5),
+                    cursor.getInt(6),
+                    cursor.getInt(7))
+            inventoriesParts.add(inventoriesPart)
+        }
+        cursor.close()
+        return inventoriesParts
     }
 
     companion object {
