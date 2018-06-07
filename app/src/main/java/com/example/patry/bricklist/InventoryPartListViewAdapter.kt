@@ -27,22 +27,29 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
         if (p != null) {
             val nazwaKlocka = v!!.findViewById<View>(R.id.nazwaKlockaTextView) as TextView
             val liczbaKlockow = v.findViewById<View>(R.id.liczbaKlockowTextView) as TextView
-            //val dodajButton = v.findViewById<View>(R.id.dodajButton) as Button
-            //val minusButton = v.findViewById<View>(R.id.minusButton) as Button
+            val plusButton = v.findViewById<Button>(R.id.plusButton)
+            val minusButton = v.findViewById<Button>(R.id.minusButton)
+
+            val dataBaseHelper = DataBaseHelper(context)
+            nazwaKlocka.text = dataBaseHelper.getItemName(p.itemID)
 
             liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
 
-            /*dodajButton.setOnClickListener {
+            plusButton.setOnClickListener {
                 if (p.quantityInSet < p.quantityInStore) {
                     p.quantityInSet += 1
+                    liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
+                    dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
                 }
             }
 
             minusButton.setOnClickListener {
                 if (p.quantityInSet > 0) {
                     p.quantityInSet -= 1
+                    liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
+                    dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
                 }
-            }*/
+            }
         }
 
         return v

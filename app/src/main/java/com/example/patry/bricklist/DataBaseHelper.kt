@@ -216,7 +216,6 @@ class DataBaseHelper
         val sqlQuery = "SELECT * FROM Inventories ORDER BY LastAccessed DESC"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
-        cursor.moveToFirst()
         while (cursor.moveToNext()) {
             val inventory = Inventory(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getLong(3))
             inventories.add(inventory)
@@ -244,6 +243,34 @@ class DataBaseHelper
         }
         cursor.close()
         return inventoriesParts
+    }
+
+    fun getItemName(itemID : Int) : String {
+        var itemName = ""
+        val sqlQuery = "SELECT Name FROM Parts WHERE  id='$itemID'"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        if (cursor.moveToFirst()) {
+            itemName = cursor.getString(0)
+        }
+        cursor.close()
+        return itemName
+    }
+
+    fun updateQuantityInSet(id : Int, quantityInSet : Int) {
+        val values = ContentValues()
+        values.put("QuantityInSet", quantityInSet)
+        val writableDatabase = this.writableDatabase
+        writableDatabase.update("InventoriesParts", values, "id=$id", null)
+        writableDatabase.close()
+    }
+
+    fun updateLastAccessed(id : Int) {
+        val values = ContentValues()
+        values.put("LastAccessed", System.currentTimeMillis())
+        val writableDatabase = this.writableDatabase
+        writableDatabase.update("Inventories", values, "id=$id", null)
+        writableDatabase.close()
     }
 
     companion object {

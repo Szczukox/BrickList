@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         projektyListView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            dataBaseHelper.updateLastAccessed(inventories.get(position).id)
             val intent = Intent(applicationContext, ProjectActivity::class.java)
             intent.putExtra("id", inventories.get(position).id)
             intent.putExtra("name", inventories.get(position).name)
