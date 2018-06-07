@@ -1,5 +1,6 @@
 package com.example.patry.bricklist
 
+import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
@@ -15,7 +16,7 @@ class DataBaseHelper
  * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
  * @param context
  */
-(private val myContext: Context) : SQLiteOpenHelper(myContext, DB_NAME, null, 1) {
+(private val myContext: Context?) : SQLiteOpenHelper(myContext, DB_NAME, null, 1) {
 
     private var myDataBase: SQLiteDatabase? = null
 
@@ -26,14 +27,16 @@ class DataBaseHelper
     fun createDataBase() {
 
         val dbExist = checkDataBase()
+        var db_read : SQLiteDatabase?=null
 
         if (dbExist) {
-            //do nothing - database already exist
+            //do nothing - database already exis
         } else {
 
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
-            this.readableDatabase
+            db_read = this.readableDatabase
+            db_read.close()
 
             try {
 
@@ -85,7 +88,7 @@ class DataBaseHelper
     private fun copyDataBase() {
 
         //Open your local db as the input stream
-        val myInput = myContext.getAssets().open(DB_NAME)
+        val myInput = myContext!!.getAssets().open(DB_NAME)
 
         // Path to the just created empty db
         val outFileName = DB_PATH + DB_NAME
@@ -134,6 +137,92 @@ class DataBaseHelper
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
 
+    }
+
+    fun insertInventory(inventory: Inventory) {
+        val values = ContentValues()
+        values.put("`Name`", inventory.name)
+        values.put("`Active`", inventory.active)
+        values.put("`LastAccessed`", inventory.lastAccessed)
+        val writableDatabase = this.writableDatabase
+        writableDatabase.insert("`Inventories`", null, values)
+        writableDatabase.close()
+    }
+
+    fun insertInventoryPart(inventoryPart: InventoryPart) {
+        val values = ContentValues()
+        values.put("InventoryID", inventoryPart.inventoryID)
+        values.put("TypeID", inventoryPart.typeID)
+        values.put("ItemID", inventoryPart.itemID)
+        values.put("QuantityInSet", inventoryPart.quantityInSet)
+        values.put("QuantityInStore", inventoryPart.quantityInStore)
+        values.put("ColorID", inventoryPart.colorID)
+        values.put("Extra", inventoryPart.extra)
+        val writableDatabase = this.writableDatabase
+        writableDatabase.insert("InventoryParts", null, values)
+        writableDatabase.close()
+    }
+
+    fun getNewInventoryID() : Int {
+        var newInventoryID = 0
+        val sqlQuery = "SELECT _id FROM Inventories ORDER BY _id DESC"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        if (cursor.moveToFirst()) {
+            newInventoryID = Integer.parseInt(cursor.getString(0))
+        }
+        cursor.close()
+        return newInventoryID
+    }
+
+    fun getTypeID(code : String) : Int {
+        var typeID = 0
+        val sqlQuery = "SELECT _id FROM ItemTypes WHERE  Code='$code'"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        if (cursor.moveToFirst()) {
+            typeID = Integer.parseInt(cursor.getString(0))
+        }
+        cursor.close()
+        return typeID
+    }
+
+    fun getItemID(code : String) : Int {
+        var itemID = 0
+        val sqlQuery = "SELECT _id FROM Parts WHERE  Code='$code'"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        if (cursor.moveToFirst()) {
+            itemID = Integer.parseInt(cursor.getString(0))
+        }
+        cursor.close()
+        return itemID
+    }
+
+    fun getColorID(code : String) : Int {
+        var colorID = 0
+        val sqlQuery = "SELECT _id FROM Colors WHERE  Code=$code"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        if (cursor.moveToFirst()) {
+            colorID = Integer.parseInt(cursor.getString(0))
+        }
+        cursor.close()
+        return colorID
+    }
+
+    fun getInventories() : MutableList<Inventory>{
+        var inventories = mutableListOf<Inventory>()
+        val sqlQuery = "SELECT * FROM Inventories ORDER BY LastAccessed DESC"
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery(sqlQuery, null)
+        cursor.moveToFirst()
+        while (cursor.moveToNext()) {
+            val inventory = Inventory(cursor.getInt(0), cursor.getString(1), cursor.getInt(2), cursor.getLong(3))
+            inventories.add(inventory)
+        }
+        cursor.close()
+        return inventories
     }
 
     companion object {

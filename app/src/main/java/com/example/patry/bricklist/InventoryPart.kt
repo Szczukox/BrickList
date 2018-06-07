@@ -20,4 +20,14 @@ class InventoryPart {
         this.colorID = colorID
         this.extra = extra
     }
+
+    constructor(inventoryID: Int, typeID: Int, itemID: Int,  quantityInSet: Int,quantityInStore: Int, colorID: Int, extra: Int) {
+        this.inventoryID = inventoryID
+        this.typeID = typeID
+        this.itemID = itemID
+        this.quantityInSet = quantityInSet
+        this.quantityInStore = quantityInStore
+        this.colorID = colorID
+        this.extra = extra
+    }
 }

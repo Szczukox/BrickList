@@ -2,16 +2,13 @@ package com.example.patry.bricklist
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Environment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import java.net.URL
 import kotlinx.android.synthetic.main.activity_add_project.*
 import java.io.*
-import java.net.HttpURLConnection
 import java.net.MalformedURLException
-import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
 
 
@@ -19,14 +16,16 @@ class AddProjectActivity : AppCompatActivity() {
 
     val MAIN_URL = "http://fcds.cs.put.poznan.pl/MyWeb/BL/"
     val DOWNLOAD_PATH = "/data/data/com.example.patry.bricklist/XML/"
+    var dataBaseHelper : DataBaseHelper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_project)
+        dataBaseHelper = DataBaseHelper(applicationContext)
     }
 
 
-    fun downloadXML() : Boolean {
+    private fun downloadXML() : Boolean {
         var valid = true
         val thread = Thread(Runnable {
             try {
@@ -70,7 +69,7 @@ class AddProjectActivity : AppCompatActivity() {
         return valid
     }
 
-    fun processXML() {
+    private fun parseXML() {
         val xml = File(MAIN_URL + numberInventoryEditText.text.toString() + ".xml")
         val documentBuilderFactory = DocumentBuilderFactory.newInstance()
         val documentBuilder = documentBuilderFactory.newDocumentBuilder()
@@ -81,7 +80,9 @@ class AddProjectActivity : AppCompatActivity() {
 
     fun add(v: View) {
         if (downloadXML()) {
-            processXML()
+            val newInventory = Inventory("Projekt " + numberInventoryEditText.text.toString(), 1, System.currentTimeMillis())
+            dataBaseHelper!!.insertInventory(newInventory)
+            //parseXML()
         } else {
             val toast = Toast.makeText(applicationContext,"Nie znaleziono projektu o podanym numerze.", Toast.LENGTH_SHORT)
             toast.show()

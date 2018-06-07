@@ -5,32 +5,31 @@ import android.database.SQLException
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
+    var inventories = mutableListOf<Inventory>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val DBHelper = DataBaseHelper(this)
+        val dataBaseHelper = DataBaseHelper(applicationContext)
         try {
 
-            DBHelper.createDataBase()
+            dataBaseHelper.createDataBase()
 
         } catch (ioe: IOException) {
 
             throw Error("Unable to create database")
         }
-        try {
 
-            DBHelper.openDataBase()
+        inventories = dataBaseHelper.getInventories()
 
-        } catch (sqle: SQLException) {
+        //projektyListView.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, in)
 
-            throw sqle
-
-        }
     }
 
     fun addProject(v: View) {

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxHeight="100dp"
+    app:layout_constrainedHeight="false">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="100dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="261dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="nazwa klocka"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/itemAmount"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="0 / 0"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/itemPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/itemMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/itemPlus"
+        android:layout_alignStart="@+id/itemPlus"
+        android:layout_below="@+id/itemPlus"
+        android:text="-" />
+</RelativeLayout>
