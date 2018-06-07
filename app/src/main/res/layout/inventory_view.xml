@@ -3,26 +3,15 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/projectTitle"
+        android:id="@+id/tytulProjektuTextView"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/projectArchive"
-        android:layout_toStartOf="@+id/projectArchive"
+        android:gravity="center"
         android:text="Tytuł Projektu"
         android:textAlignment="center"
-        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textSize="24sp" />
 
-    <CheckBox
-        android:id="@+id/projectArchive"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="" />
 </RelativeLayout>

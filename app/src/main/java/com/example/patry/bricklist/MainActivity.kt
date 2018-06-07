@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         inventories = dataBaseHelper.getInventories()
 
-        //projektyListView.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, in)
+        projektyListView.adapter = InventoryListAdapter(applicationContext, R.layout.inventory_view, inventories)
 
     }
 
