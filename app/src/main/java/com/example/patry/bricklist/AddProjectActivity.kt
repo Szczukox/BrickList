@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Toast
 import java.net.URL
 import kotlinx.android.synthetic.main.activity_add_project.*
+import org.w3c.dom.Element
+import org.w3c.dom.Node
 import java.io.*
 import java.net.MalformedURLException
 import javax.xml.parsers.DocumentBuilderFactory
@@ -70,11 +72,36 @@ class AddProjectActivity : AppCompatActivity() {
     }
 
     private fun parseXML() {
-        val xml = File(MAIN_URL + numberInventoryEditText.text.toString() + ".xml")
+        val xml = File(DOWNLOAD_PATH + numberInventoryEditText.text.toString() + ".xml")
         val documentBuilderFactory = DocumentBuilderFactory.newInstance()
         val documentBuilder = documentBuilderFactory.newDocumentBuilder()
         val parseXML = documentBuilder.parse(xml)
         parseXML.getDocumentElement().normalize()
+        val valueOfItem = parseXML.getElementsByTagName("ITEM")
+
+        for (item in 0 until valueOfItem.length) {
+            val node = valueOfItem.item(item)
+            if (node.nodeType == Node.ELEMENT_NODE) {
+                val element = node as Element
+                if (element.getElementsByTagName("ALTERNATE").item(0).textContent=="N") {
+                    val inventoryID = dataBaseHelper!!.getNewInventoryID()
+                    val typeID = dataBaseHelper!!.getTypeID(element.getElementsByTagName("ITEMTYPE").item(0).textContent.toString())
+                    val itemID = dataBaseHelper!!.getItemID(element.getElementsByTagName("ITEMID").item(0).textContent.toString())
+                    val quantityInStore = element.getElementsByTagName("QTY").item(0).textContent.toInt()
+                    val colorID = dataBaseHelper!!.getColorID(element.getElementsByTagName("COLOR").item(0).textContent.toString())
+                    val extra = element.getElementsByTagName("EXTRA").item(0).textContent.toString()
+                    val extraID = if (extra == "N") 0 else 1
+                    val inventoryPart = InventoryPart(inventoryID, typeID, itemID, 0, quantityInStore, colorID, extraID)
+                    println(inventoryID)
+                    println(typeID)
+                    println(itemID)
+                    println(quantityInStore)
+                    println(colorID)
+                    println(extraID)
+                    dataBaseHelper!!.insertInventoryPart(inventoryPart)
+                }
+            }
+        }
 
     }
 
@@ -82,7 +109,7 @@ class AddProjectActivity : AppCompatActivity() {
         if (downloadXML()) {
             val newInventory = Inventory("Projekt " + numberInventoryEditText.text.toString(), 1, System.currentTimeMillis())
             dataBaseHelper!!.insertInventory(newInventory)
-            //parseXML()
+            parseXML()
         } else {
             val toast = Toast.makeText(applicationContext,"Nie znaleziono projektu o podanym numerze.", Toast.LENGTH_SHORT)
             toast.show()

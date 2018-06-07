@@ -12,7 +12,7 @@ class ProjectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_project)
     }
 
-    fun archive(v : View) {
+    fun export(v : View) {
 
     }
 

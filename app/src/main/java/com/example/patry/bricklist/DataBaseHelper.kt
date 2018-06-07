@@ -159,13 +159,13 @@ class DataBaseHelper
         values.put("ColorID", inventoryPart.colorID)
         values.put("Extra", inventoryPart.extra)
         val writableDatabase = this.writableDatabase
-        writableDatabase.insert("InventoryParts", null, values)
+        writableDatabase.insert("InventoriesParts", null, values)
         writableDatabase.close()
     }
 
     fun getNewInventoryID() : Int {
         var newInventoryID = 0
-        val sqlQuery = "SELECT _id FROM Inventories ORDER BY _id DESC"
+        val sqlQuery = "SELECT id FROM Inventories ORDER BY id DESC"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
         if (cursor.moveToFirst()) {
@@ -177,7 +177,7 @@ class DataBaseHelper
 
     fun getTypeID(code : String) : Int {
         var typeID = 0
-        val sqlQuery = "SELECT _id FROM ItemTypes WHERE  Code='$code'"
+        val sqlQuery = "SELECT id FROM ItemTypes WHERE  Code='$code'"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
         if (cursor.moveToFirst()) {
@@ -189,7 +189,7 @@ class DataBaseHelper
 
     fun getItemID(code : String) : Int {
         var itemID = 0
-        val sqlQuery = "SELECT _id FROM Parts WHERE  Code='$code'"
+        val sqlQuery = "SELECT id FROM Parts WHERE  Code='$code'"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
         if (cursor.moveToFirst()) {
@@ -201,7 +201,7 @@ class DataBaseHelper
 
     fun getColorID(code : String) : Int {
         var colorID = 0
-        val sqlQuery = "SELECT _id FROM Colors WHERE  Code=$code"
+        val sqlQuery = "SELECT id FROM Colors WHERE  Code=$code"
         val writableDatabase = this.writableDatabase
         val cursor = writableDatabase.rawQuery(sqlQuery, null)
         if (cursor.moveToFirst()) {
