@@ -31,8 +31,14 @@ class ProjectActivity : AppCompatActivity() {
 
     }
 
+    fun archive(v : View) {
+        dataBaseHelper!!.updateInventoryActive(id)
+        val intent = Intent(applicationContext, MainActivity::class.java)
+        startActivityForResult(intent, Const.PROJECT_REQUEST_CODE)
+    }
+
     fun back(v : View) {
         val intent = Intent(applicationContext, MainActivity::class.java)
-        startActivityForResult(intent, Const.MAIN_ACTIVITY_REQUEST_CODE)
+        startActivityForResult(intent, Const.PROJECT_REQUEST_CODE)
     }
 }

@@ -273,6 +273,14 @@ class DataBaseHelper
         writableDatabase.close()
     }
 
+    fun updateInventoryActive(id : Int) {
+        val values = ContentValues()
+        values.put("Active", 0)
+        val writableDatabase = this.writableDatabase
+        writableDatabase.update("Inventories", values, "id=$id", null)
+        writableDatabase.close()
+    }
+
     companion object {
 
         //The Android's default system path of your application database.

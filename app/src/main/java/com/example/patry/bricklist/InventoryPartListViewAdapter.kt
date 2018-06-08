@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.TextView
 
+
 class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
 
     constructor(context: Context, resource: Int, objects: MutableList<InventoryPart>) : super(context, resource, objects)
@@ -35,11 +36,18 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
 
             liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
 
+            if (p.quantityInSet == p.quantityInStore) {
+                liczbaKlockow.setBackgroundColor(context.resources.getColor(android.R.color.holo_green_dark))
+            }
+
             plusButton.setOnClickListener {
                 if (p.quantityInSet < p.quantityInStore) {
                     p.quantityInSet += 1
                     liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
                     dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
+                    if (p.quantityInSet == p.quantityInStore) {
+                        liczbaKlockow.setBackgroundColor(context.resources.getColor(android.R.color.holo_green_dark))
+                    }
                 }
             }
 
@@ -48,6 +56,7 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
                     p.quantityInSet -= 1
                     liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
                     dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
+                    liczbaKlockow.setBackgroundColor(0)
                 }
             }
         }

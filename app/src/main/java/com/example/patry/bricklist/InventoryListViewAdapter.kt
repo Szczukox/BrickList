@@ -2,6 +2,7 @@ package com.example.patry.bricklist
 
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,11 @@ class InventoryListAdapter : ArrayAdapter<Inventory> {
         if (p != null) {
             val tytulProjektu = v!!.findViewById<View>(R.id.tytulProjektuTextView) as TextView
             tytulProjektu.text = p.name
+
+            if (p.active == 0) {
+                tytulProjektu.setTextColor(Color.GRAY)
+            }
+
         }
 
         return v
