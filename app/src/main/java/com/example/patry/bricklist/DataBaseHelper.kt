@@ -281,6 +281,18 @@ class DataBaseHelper
         writableDatabase.close()
     }
 
+    fun getDataToExportXML(id : Int, itemTypes : ArrayList<String>, itemIds : ArrayList<Int>, colors : ArrayList<Int>, qTy : ArrayList<Int>){
+        val writableDatabase = this.writableDatabase
+        val cursor = writableDatabase.rawQuery("Select ItemTypes.Code,InventoriesParts.ItemId,InventoriesParts.QuantityInStore,Colors.code From InventoriesParts join ItemTypes on (ItemTypes.id = InventoriesParts.TypeId) Join Colors on(InventoriesParts.ColorId=Colors.id) join inventories on (InventoryId=inventories.id) where inventories.id = $id",null)
+
+        while (cursor.moveToNext()){
+            itemTypes.add(cursor.getString(0))
+            itemIds.add(Integer.parseInt(cursor.getString(1)))
+            colors.add(Integer.parseInt(cursor.getString(3)))
+            qTy.add(Integer.parseInt(cursor.getString(2)))
+        }
+    }
+
     companion object {
 
         //The Android's default system path of your application database.

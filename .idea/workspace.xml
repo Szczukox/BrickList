@@ -13,17 +13,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,8 +79,8 @@
       <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="735">
+              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="e#37#279#0" expanded="true" />
               </folding>
@@ -85,37 +88,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InventoryPartListViewAdapter.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InventoryPartListViewAdapter.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-339">
-              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+            <state relative-caret-position="357">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="e#37#252#0" expanded="true" />
+                <element signature="e#37#282#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AddProjectActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="100" column="32" lean-forward="false" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="507">
+              <caret line="112" column="53" lean-forward="false" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+              <folding>
+                <element signature="e#37#427#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,8 +115,8 @@
       <file leaf-file-name="DataBaseHelper.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="279" column="62" lean-forward="false" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="62" />
+            <state relative-caret-position="6006">
+              <caret line="293" column="5" lean-forward="false" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -133,17 +125,31 @@
       <file leaf-file-name="ProjectActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="294">
+              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding>
+                <element signature="e#37#624#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InventoryListViewAdapter.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SettingsActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+              <folding>
+                <element signature="e#37#250#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InventoryListViewAdapter.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
+            <state relative-caret-position="567">
               <caret line="33" column="53" lean-forward="false" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
               <folding>
                 <element signature="e#38#254#0" expanded="true" />
@@ -155,7 +161,7 @@
       <file leaf-file-name="activity_project.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="596">
+            <state relative-caret-position="1512">
               <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
               <folding />
             </state>
@@ -2287,9 +2293,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_inventory.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/Inventory.kt" />
@@ -2298,14 +2302,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/inventory_part_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPart.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt" />
       </list>
     </option>
   </component>
@@ -2329,10 +2335,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2366,6 +2370,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2642,7 +2648,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2657,44 +2663,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="9" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="e#37#279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2742,7 +2723,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2771,7 +2754,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2819,7 +2804,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2881,7 +2868,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
           <caret line="106" column="38" lean-forward="false" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2921,7 +2910,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2961,7 +2952,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1911">
           <caret line="99" column="34" lean-forward="false" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2992,51 +2985,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/Const.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="21" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
@@ -3045,49 +3001,6 @@
         <state relative-caret-position="210">
           <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_part_view.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#279#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3102,46 +3015,136 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt">
+    <entry file="file://$PROJECT_DIR$/../../AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.example.patry.bricklist/files/Output/test.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/Const.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="100" column="32" lean-forward="false" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state relative-caret-position="147">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt">
+    <entry file="file://$PROJECT_DIR$/../../AndroidStudio/DeviceExplorer/5.1_WVGA_API_27 [emulator-5554]/data/data/com.example.patry.bricklist/files/Output/Projekt%2070403.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_project.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-339">
-          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="567">
+          <caret line="33" column="53" lean-forward="false" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
           <folding>
-            <element signature="e#37#252#0" expanded="true" />
+            <element signature="e#38#254#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/inventory_part_view.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1533">
+          <caret line="73" column="46" lean-forward="false" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.example.patry.bricklist/files/Output/Projekt%20555.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6006">
+          <caret line="293" column="5" lean-forward="false" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/ProjectActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/DataBaseHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="279" column="62" lean-forward="false" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryListViewAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="53" lean-forward="false" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+        <state relative-caret-position="294">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
-            <element signature="e#38#254#0" expanded="true" />
+            <element signature="e#37#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/SettingsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+          <folding>
+            <element signature="e#37#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#37#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/AddProjectActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="112" column="53" lean-forward="false" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+          <folding>
+            <element signature="e#37#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_project.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/patry/bricklist/InventoryPartListViewAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#282#0" expanded="true" />
           </folding>
         </state>
       </provider>

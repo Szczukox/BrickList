@@ -16,13 +16,15 @@ import javax.xml.parsers.DocumentBuilderFactory
 
 class AddProjectActivity : AppCompatActivity() {
 
-    val MAIN_URL = "http://fcds.cs.put.poznan.pl/MyWeb/BL/"
+    var MAIN_URL = "http://fcds.cs.put.poznan.pl/MyWeb/BL/"
     val DOWNLOAD_PATH = "/data/data/com.example.patry.bricklist/XML/"
     var dataBaseHelper : DataBaseHelper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_project)
+        val extras = intent.extras
+        MAIN_URL = extras.getString("url")
         dataBaseHelper = DataBaseHelper(applicationContext)
     }
 
@@ -92,12 +94,12 @@ class AddProjectActivity : AppCompatActivity() {
                     val extra = element.getElementsByTagName("EXTRA").item(0).textContent.toString()
                     val extraID = if (extra == "N") 0 else 1
                     val inventoryPart = InventoryPart(inventoryID, typeID, itemID, 0, quantityInStore, colorID, extraID)
-                    println(inventoryID)
+                    /*println(inventoryID)
                     println(typeID)
                     println(itemID)
                     println(quantityInStore)
                     println(colorID)
-                    println(extraID)
+                    println(extraID)*/
                     dataBaseHelper!!.insertInventoryPart(inventoryPart)
                 }
             }
@@ -107,9 +109,15 @@ class AddProjectActivity : AppCompatActivity() {
 
     fun add(v: View) {
         if (downloadXML()) {
-            val newInventory = Inventory("Projekt " + numberInventoryEditText.text.toString(), 1, System.currentTimeMillis())
+            val newInventory = Inventory(nazwaEditText.text.toString(), 1, System.currentTimeMillis())
             dataBaseHelper!!.insertInventory(newInventory)
             parseXML()
+
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivityForResult(intent, Const.PROJECT_REQUEST_CODE)
+
+            val toast = Toast.makeText(applicationContext,"Dodano projekt.", Toast.LENGTH_SHORT)
+            toast.show()
         } else {
             val toast = Toast.makeText(applicationContext,"Nie znaleziono projektu o podanym numerze.", Toast.LENGTH_SHORT)
             toast.show()

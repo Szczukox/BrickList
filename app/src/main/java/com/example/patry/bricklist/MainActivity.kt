@@ -11,6 +11,7 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
 
     var inventories = mutableListOf<Inventory>()
+    var MAIN_URL = "http://fcds.cs.put.poznan.pl/MyWeb/BL/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,13 @@ class MainActivity : AppCompatActivity() {
 
             throw Error("Unable to create database")
         }
+        try {
+            val extras = intent.extras
+            MAIN_URL = extras.getString("url")
+        } catch (e : NullPointerException) {
+            MAIN_URL = "http://fcds.cs.put.poznan.pl/MyWeb/BL/"
+        }
+
 
         projektyListView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             dataBaseHelper.updateLastAccessed(inventories.get(position).id)
@@ -39,11 +47,13 @@ class MainActivity : AppCompatActivity() {
 
     fun addProject(v: View) {
         val intent = Intent(applicationContext, AddProjectActivity::class.java)
+        intent.putExtra("url", MAIN_URL)
         startActivityForResult(intent, Const.ADD_PROJECT_REQUEST_CODE)
     }
 
     fun settings(v: View) {
         val intent = Intent(applicationContext, SettingsActivity::class.java)
+        intent.putExtra("url", MAIN_URL)
         startActivityForResult(intent, Const.SETTINGS_REQUEST_CODE)
     }
 }

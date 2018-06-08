@@ -1,6 +1,7 @@
 package com.example.patry.bricklist
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,10 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
             liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
 
             if (p.quantityInSet == p.quantityInStore) {
-                liczbaKlockow.setBackgroundColor(context.resources.getColor(android.R.color.holo_green_dark))
+                liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore} MAX!!!"
+                liczbaKlockow.setBackgroundColor(Color.GREEN)
+            } else {
+                liczbaKlockow.setBackgroundColor(Color.WHITE)
             }
 
             plusButton.setOnClickListener {
@@ -46,7 +50,8 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
                     liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
                     dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
                     if (p.quantityInSet == p.quantityInStore) {
-                        liczbaKlockow.setBackgroundColor(context.resources.getColor(android.R.color.holo_green_dark))
+                        liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore} MAX!!!"
+                        liczbaKlockow.setBackgroundColor(Color.GREEN)
                     }
                 }
             }
@@ -56,7 +61,7 @@ class InventoryPartListViewAdapter : ArrayAdapter<InventoryPart> {
                     p.quantityInSet -= 1
                     liczbaKlockow.text = "${p.quantityInSet} / ${p.quantityInStore}"
                     dataBaseHelper.updateQuantityInSet(p.id, p.quantityInSet)
-                    liczbaKlockow.setBackgroundColor(0)
+                    liczbaKlockow.setBackgroundColor(Color.WHITE)
                 }
             }
         }
